@@ -1,0 +1,40 @@
+lessson1
+namespace hm { internal class Program { static void Main(string[] args)
+ { Console.WriteLine("Здравствуйте,прошу заполните анкету"); Console.WriteLine("Как вас зовут - имя , фамилия"); 
+ string name = Console.ReadLine(); 
+ string text = "Здравствуйте" + name; 
+ Console.WriteLine(text); 
+ Console.WriteLine("Ваш возраст"); 
+ string age = Console.ReadLine(); 
+ Console.WriteLine("Ваш вес"); 
+ string weight = Console.ReadLine(); 
+ Console.WriteLine("Ваш рост");
+ string height = Console.ReadLine();
+ string text2 = "Данные анкеты" + " " + name + " " + weight + " " + height + " " + age;
+  Console.Write(text2);
+   Console.ReadLine(); } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static void Main2(string[] args) 
+{ Console.WriteLine("Рассчитать и вывести индекс массы"); Console.WriteLine("Введите массу тела в кг"); 
+string m1 = Console.ReadLine(); 
+int m = int.Parse(m1); 
+Console.Write("Введите рост в метрах"); 
+string h1 = Console.ReadLine(); 
+int h = int.Parse(h1); 
+int result = m / (h * h); 
+Console.WriteLine(result); 
+Console.WriteLine(m / (h * h)); 
+Console.ReadLine(); } } }
