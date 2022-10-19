@@ -1,0 +1,73 @@
+namespace Less6
+{
+    
+    public delegate double FunA(double a, double x);
+
+    public delegate double Fun(double x);
+
+    class Program
+    {
+        
+        public static void Table(FunA F, double a, double x, double b)
+        {
+            Console.WriteLine("------- X ------ Y -----\n");
+            while (x <= b)
+            {
+                Console.WriteLine("| {0,8:0.000} | {1,8:0.000} |", x, F(a, x));
+                x += 1;
+            }
+            Console.WriteLine("------------------------\n");
+        }
+
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Таблица функции a*x^2");
+            Table(delegate (double a, double x) { return a * x * x; }, -3, -3, 3);
+            Console.WriteLine("Таблица функции a*sin(x)");
+            Table(delegate (double a, double x) { return a * Math.Sin(x); }, -3, -3, 3);
+
+           
+           
+        }
+        public static void Table(Fun F, double x, double b)
+        {
+            Console.WriteLine("------- X ------ Y -----\n");
+            while (x <= b)
+            {
+                Console.WriteLine("| {0,8:0.000} | {1,8:0.000} |", x, F(x));
+                x += 1;
+            }
+            Console.WriteLine("------------------------\n");
+        }
+
+        public static double MyFunc(double x)
+        {
+            return x * x * x;
+        }
+    }
+}
+
+
+////
+
+
+public delegate double Fun(double x);
+
+    class Program
+    {
+        public static double A(double x)
+        {
+            return x * Math.Sin(x) - 10 * x + 10;
+        }
+        public static double B(double x)
+        {
+            return x * x - 5 * Math.Cos(x) + 10;
+        }
+        public static double C(double x)
+        {
+            return x * x - 50 * x + 10;
+        }
+
+
+
