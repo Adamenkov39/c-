@@ -1,0 +1,76 @@
+namespace Lesson3
+{
+    internal class Class3
+    {
+
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            int num = 0;
+
+            do
+            {
+                num = int.Parse(Console.ReadLine());
+                if (num > 0 && num % 2 == 1)
+                    sum += num;
+
+            } while (num != 0);
+            Console.WriteLine("Sum: " + sum);
+        }
+    }
+}
+  
+
+// В задание Complex что то запутался...
+namespace Complexx
+{
+    struct Complex
+    {
+        public double im;
+        public double re;
+        public Complex Minus (Complex x)
+        {
+            Complex y;
+            y.im = im - x.im;
+            y.re = re - x.re;
+            return y;
+
+        }
+        public Complex Multi(Complex x)
+        {
+            Complex y;
+            y.im = re * x.im - im * x.re;
+            y.re = re * x.re - im * x.re;
+            return y;
+        }
+       
+      
+        
+        static void Main(string[] args)
+        {
+            Complex complex1;
+            complex1.re = 4;
+            complex1.im = 4;
+
+            Complex complex2;
+            complex2.re = 2;
+            complex2.im = 2;
+                
+               Console.WriteLine("Рассмотрим работу структуры:");
+               Complex result = complex1.Minus(complex2);
+                Console.WriteLine("Результом операции вычитания чисел: " + complex1 + " и " + complex2 + " является "
+               + result);
+                Complex result2 = complex1.Multi(complex2);
+                Console.WriteLine("Результом операции умержения чисел: " + complex1 + " и " + complex2 + " является "
+               + result);
+
+
+
+
+
+
+
+                Console.ReadLine();
+        }
+    }
+ }
