@@ -1,0 +1,58 @@
+internal class Program
+    {
+        static readonly string Login = "Adams";
+        static readonly string Password = "Password";
+
+        public static object Account { get; private set; }
+
+        public static string getLogin()
+        {
+            return Login;
+        }
+
+        public static string getPassword()
+        {
+            return Password;
+        }
+
+        static void Main(string[] args)
+        {
+
+            static void Main2(string[] args)
+            {
+                string accountFile = "..///...logsnpass.txt";
+
+
+                try
+                {
+                    string[] arr = ReadArrayFromAccountFile(accountFile);
+                    if (getLogin(arr[0], arr[1]))
+                    {
+                        Console.WriteLine("Login Successful!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Account not found.");
+                    }
+                }              
+               
+            }
+        }
+
+        private static bool getLogin(string v1, string v2)
+        {
+            throw new NotImplementedException();
+        }
+            static bool Account(String login, String password)
+            {
+            if (Account.getLogin() == login && Account.getPassword() == password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        }
+}
